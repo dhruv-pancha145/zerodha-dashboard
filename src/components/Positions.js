@@ -1,20 +1,20 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
+// import { useState, useEffect } from "react";
+// import axios from "axios";
 
 import { positions } from "../data/data";
 
 
 
 
-const Positions = () => {
-  const [allPosition, setallPosition] = useState([]);
+// const Positions = () => {
+//   const [allPosition, setallPosition] = useState([]);
 
-   useEffect(() => {
-      axios.get(" https://zerodha-backend-4i65.onrender.com/allposition").then((res) => {
-        setallPosition(res.data);
-      })  
-   },[]);
+//    useEffect(() => {
+//       axios.get(" https://zerodha-backend-4i65.onrender.com/allposition").then((res) => {
+//         setallPosition(res.data);
+//       })  
+//    },[]);
   return (
     <>
       <h3 className="title">Positions ({positions.length})</h3>
@@ -55,6 +55,6 @@ const Positions = () => {
       </div>
     </>
   );
-};
+
 
 export default Positions;
