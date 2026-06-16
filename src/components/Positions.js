@@ -1,20 +1,7 @@
 import React from "react";
-// import { useState, useEffect } from "react";
-// import axios from "axios";
-
 import { positions } from "../data/data";
 
-
-
-
-// const Positions = () => {
-//   const [allPosition, setallPosition] = useState([]);
-
-//    useEffect(() => {
-//       axios.get(" https://zerodha-backend-4i65.onrender.com/allposition").then((res) => {
-//         setallPosition(res.data);
-//       })  
-//    },[]);
+const Positions = () => {
   return (
     <>
       <h3 className="title">Positions ({positions.length})</h3>
@@ -55,6 +42,6 @@ import { positions } from "../data/data";
       </div>
     </>
   );
-
+};
 
 export default Positions;
