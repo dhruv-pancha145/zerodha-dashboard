@@ -15,7 +15,7 @@ const Menu = () => {
 
   const handleLogout = () => {
     document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = "zerodha-frontend-lovat.vercel.app/login";
   };
 
   const menuClass = "menu";

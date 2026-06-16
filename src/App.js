@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     const token = document.cookie.includes("token");
     if (!token) {
-      window.location.href = "http://localhost:3000/login";
+      window.location.href = "zerodha-frontend-lovat.vercel.app/login";
     }
   }, []);
 
