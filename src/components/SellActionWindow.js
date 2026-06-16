@@ -12,7 +12,7 @@ const SellActionWindow = ({ uid }) => {
 
   const handleSellClick = async () => {
     try {
-      const res = await axios.get("http://localhost:3002/allholding");
+      const res = await axios.get("https://zerodha-backend-4i65.onrender.com/allholding");
       const holding = res.data.find((stock) => stock.name === uid);
 
       if (!holding) {
@@ -29,7 +29,7 @@ const SellActionWindow = ({ uid }) => {
 
 
 
-await axios.post("http://localhost:3002/sellOrder", {
+await axios.post("https://zerodha-backend-4i65.onrender.com/sellOrder", {
   name: uid,
   qty: Number(stockQuantity), 
   price: stockPrice,
