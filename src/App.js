@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import axios from "axios";  
+import axios from "axios";
 import './App.css';
-import Apps from "./components/Apps";
+import Home from "./components/Home";  // ✅ Apps ki jagah Home import karo
 
 function App() {
   useEffect(() => {
@@ -16,7 +16,7 @@ function App() {
       });
   }, []);
 
-  return <Apps />;
+  return <Home />;  // ✅ Apps ki jagah Home return karo
 }
 
 export default App;
