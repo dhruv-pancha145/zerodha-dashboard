@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";  
+
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
@@ -13,10 +15,14 @@ const Menu = () => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
 
-  const handleLogout = () => {
-    document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    window.location.href = "https://zerodha-frontend-lovat.vercel.app/login";
-  };
+ const handleLogout = async () => {
+  try {
+    await axios.post("https://zerodha-backend-4i65.onrender.com/logout", {}, { withCredentials: true });
+  } catch (err) {
+    console.error(err);
+  }
+  window.location.href = "https://zerodha-frontend-lovat.vercel.app/login";
+};
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
